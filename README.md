@@ -142,7 +142,7 @@ rustup target add wasm32-unknown-unknown
 ### Stellar CLI
 
 ```bash
-cargo install --locked stellar-cli --features opt
+cargo install --locked stellar-cli
 ```
 
 ### Go

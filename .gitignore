@@ -1,0 +1,21 @@
+# Dependencies & Build artifacts
+node_modules/
+.next/
+out/
+target/
+*.wasm
+bin/
+*.exe
+
+# Go binaries
+backend/main
+backend/relay
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
