@@ -1,0 +1,25 @@
+name: App & Services CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend-test:
+    name: Go Relay Service Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Run Go Vet & Build
+        run: |
+          cd services/relay
+          go vet ./...
+          go build ./cmd/relay/main.go
